@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Tugas js 4</title>
+    <style>
+        /* Styling untuk pop-up table */
+        .popup-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .popup-table th, .popup-table td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+        .popup-table th {
+            background-color: #00bbf9;
+        }
+        .popup-table tfoot td {
+            background-color: #99d8ff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>"Data Pegawai Viana Company"</h1>
+    <form id="input-pegawai">
+        <label for="nama">Nama Pegawai:</label><br>
+        <input type="text" id="nama" name="nama"><br><br>
+        <label for="jabatan">Jabatan:</label><br>
+        <select id="jabatan" name="jabatan">
+            <option value=""> Pilih Jabatan ----</option>
+            <option value="Manager">Manager</option>
+            <option value="Asisten Manager">Asisten Manager</option>
+            <option value="Staff">Staff</option>
+        </select><br><br>
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value=""> Pilih Status Anda----</option>
+            <option value="Sudah Menikah">Sudah Menikah</option>
+            <option value="Belum Menikah">Belum Menikah</option>
+        </select><br><br>
+        <input type="button" value="Submit" onclick="datapegawai()">
+    </form>
+
+    <script src="js/pegawai.js"></script>
+</body>
+</html>
