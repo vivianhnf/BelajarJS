@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handler</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+   <div id="div1">
+    Hewan Kucing
+   </div> 
+   <div id="div2">
+    Hewan Kuda
+   </div>
+   <div id="div3">
+    Hewan Sapi
+   </div>
+
+<audio id="kucingSound" src="kucing.mp3"></audio>
+<audio id="kudaSound" src="kuda.mp3"></audio>
+<audio id="sapiSound" src="sapi.mp3"></audio>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    //tugas
+    //ketika mousenya di atas gambar atau di arahkan ke gambar ada suaranya
+    $("document").ready(function(){
+        $("#div1").mouseover(function(){
+            $(this).css({
+                background: "url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Calico_cat_-_Phoebe.jpg')"
+            });
+            document.getElementById('kucingSound').play();
+        });
+        $("div").mouseout(function(){
+            $(this).css({
+                background: "green"
+            });
+        });
+        $("#div2").mouseover(function(){
+            $(this).css({
+                background: "url('https://media.istockphoto.com/id/119869211/id/foto/kuda-poni-palomino-shetland-equus-caballus-berdiri-latar-belakang-putih.jpg?s=612x612&w=0&k=20&c=ImgayYCsIOBlP-DCQCmYXc4_VbLhRDLcwsmQE3kxlUI=')"
+            });
+            document.getElementById('kudaSound').play();
+        });
+        $("#div3").mouseover(function(){
+            $(this).css({
+                background: "url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/640px-Cow_female_black_white.jpg')"
+            });
+            document.getElementById('sapiSound').play();
+        });
+    });
+
+</script>
+</body>
+</html>
